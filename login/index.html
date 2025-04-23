@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça login na Cuidar Pets - Conectando tutores e cuidadores de animais">
+    <title>Login | Cuidar Pets</title>
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+
+<body class="login-body">
+    <div class="login-center-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="login-logo">
+                <h1 class="login-title">Acesse sua conta</h1>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <div class="input-box">
+                        <i class='bx bx-envelope'></i>
+                        <input id="email" name="email" type="email" placeholder="E-mail" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <i class='bx bx-lock-alt'></i>
+                        <input id="password" name="password" type="password" placeholder="Senha" required minlength="6">
+                        <button type="button" class="toggle-password" aria-label="Mostrar senha">
+                            <i class='bx bx-hide'></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Lembrar de mim</label>
+                    </div>
+                    <a href="esqueci-senha.html" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="button primary login-button"><a href="../pos-login/index.html">Entrar</a></button>
+
+                <div class="register-link">
+                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
