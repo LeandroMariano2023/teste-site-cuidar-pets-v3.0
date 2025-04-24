@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esqueceu a Senha</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <form class="formulario" method="POST">
+      <h1>Esqueceu sua senha?</h1>
+      <p>Digite o e-mail cadastrado. Enviaremos um link para redefinir sua senha.</p>
+
+      <label for="email" class="sr-only">E-mail cadastrado</label>
+      <input type="email" id="email" name="email" placeholder="Informe seu e-mail" required />
+
+      <button type="submit" class="btn enviar"><a href="../login/index.html">Enviar</a></button>
+    </form>
+  </main>
+</body>
+</html>
