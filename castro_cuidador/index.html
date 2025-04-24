@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Cadastro de Tutor e Pets</title>
+  <title>Cadastro de Cuidador</title>
 </head>
 <body>
   <div class="container">
     <form class="formulario" autocomplete="on">
-      <h1>Cadastro de Tutor e Pets</h1>
+      <h1>Cadastro de Cuidador</h1>
 
-      <!-- Dados do Tutor -->
+      <!-- Dados Pessoais -->
       <fieldset>
-        <legend>Dados do Tutor</legend>
+        <legend>Dados Pessoais</legend>
         <input type="text" name="cpf" placeholder="CPF" required>
         <input type="text" name="nome" placeholder="Nome completo" required>
         <select name="genero" required>
@@ -37,38 +37,23 @@
         <input type="text" name="logradouro" placeholder="Logradouro" required>
       </fieldset>
 
-      <!-- Dados dos Pets -->
+      <!-- Formação e Experiência -->
       <fieldset>
-        <legend>Dados dos Pets</legend>
-        <div class="pet">
-          <input type="text" name="pet_nome[]" placeholder="Nome do Pet" required>
-          <input type="text" name="pet_especie[]" placeholder="Espécie" required>
-          <input type="text" name="pet_raca[]" placeholder="Raça" required>
-          <select name="pet_sexo[]" required>
-            <option value="" disabled selected>Sexo</option>
-            <option value="macho">Macho</option>
-            <option value="femea">Fêmea</option>
-          </select>
-          <input type="number" name="pet_idade[]" placeholder="Idade" required>
-          <input type="date" name="pet_nascimento[]" placeholder="Data de nascimento" required>
-          <input type="text" name="pet_sinais[]" placeholder="Sinais característicos" required>
-          <input type="text" name="pet_pelagem[]" placeholder="Pelagem/Plumagem" required>
-          <input type="text" name="pet_microchip[]" placeholder="Microchip">
-          <input type="file" name="pet_foto[]" accept="image/*">
-        </div>
-        <button type="button" onclick="adicionarPet()">Adicionar outro pet</button>
+        <legend>Formação e Experiência</legend>
+        <select name="escolaridade" required>
+          <option value="" disabled selected>Escolaridade</option>
+          <option value="fundamental">Ensino Fundamental</option>
+          <option value="medio">Ensino Médio</option>
+          <option value="superior">Ensino Superior</option>
+        </select>
+        <input type="text" name="cursos" placeholder="Cursos relacionados" required>
+        <textarea name="experiencia" placeholder="Experiência prévia" required></textarea>
+        <textarea name="disponibilidade" placeholder="Disponibilidade de horários" required></textarea>
+        <textarea name="referencias" placeholder="Referências profissionais" required></textarea>
       </fieldset>
 
       <button type="submit" class="btn"><a href="../login/index.html">Cadastrar</a></button>
     </form>
   </div>
-
-  <script>
-    function adicionarPet() {
-      const petSection = document.querySelector('.pet');
-      const clone = petSection.cloneNode(true);
-      petSection.parentNode.insertBefore(clone, petSection.nextSibling);
-    }
-  </script>
 </body>
 </html>
