@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Tutor e Pets</title>
+</head>
+<body>
+  <div class="container">
+    <form class="formulario" autocomplete="on">
+      <h1>Cadastro de Tutor e Pets</h1>
+
+      <!-- Dados do Tutor -->
+      <fieldset>
+        <legend>Dados do Tutor</legend>
+        <input type="text" name="cpf" placeholder="CPF" required>
+        <input type="text" name="nome" placeholder="Nome completo" required>
+        <select name="genero" required>
+          <option value="" disabled selected>Gênero</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+        <input type="date" name="nascimento" placeholder="Data de nascimento" required>
+        <input type="tel" name="telefone" placeholder="Telefone" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+      </fieldset>
+
+      <!-- Endereço -->
+      <fieldset>
+        <legend>Endereço</legend>
+        <input type="text" name="cep" placeholder="CEP" required>
+        <input type="text" name="estado" placeholder="Estado" required>
+        <input type="text" name="cidade" placeholder="Cidade" required>
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <input type="text" name="logradouro" placeholder="Logradouro" required>
+      </fieldset>
+
+      <!-- Dados dos Pets -->
+      <fieldset>
+        <legend>Dados dos Pets</legend>
+        <div class="pet">
+          <input type="text" name="pet_nome[]" placeholder="Nome do Pet" required>
+          <input type="text" name="pet_especie[]" placeholder="Espécie" required>
+          <input type="text" name="pet_raca[]" placeholder="Raça" required>
+          <select name="pet_sexo[]" required>
+            <option value="" disabled selected>Sexo</option>
+            <option value="macho">Macho</option>
+            <option value="femea">Fêmea</option>
+          </select>
+          <input type="number" name="pet_idade[]" placeholder="Idade" required>
+          <input type="date" name="pet_nascimento[]" placeholder="Data de nascimento" required>
+          <input type="text" name="pet_sinais[]" placeholder="Sinais característicos" required>
+          <input type="text" name="pet_pelagem[]" placeholder="Pelagem/Plumagem" required>
+          <input type="text" name="pet_microchip[]" placeholder="Microchip">
+          <input type="file" name="pet_foto[]" accept="image/*">
+        </div>
+        <button type="button" onclick="adicionarPet()">Adicionar outro pet</button>
+      </fieldset>
+
+      <button type="submit" class="btn">Cadastrar</button>
+    </form>
+  </div>
+
+  <script>
+    function adicionarPet() {
+      const petSection = document.querySelector('.pet');
+      const clone = petSection.cloneNode(true);
+      petSection.parentNode.insertBefore(clone, petSection.nextSibling);
+    }
+  </script>
+</body>
+</html>
