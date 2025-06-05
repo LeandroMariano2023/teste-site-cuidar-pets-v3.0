@@ -78,6 +78,26 @@ button:hover {
   background-color: #27ae60;
 }
 
+.senha-container {
+  position: relative;
+}
+
+.senha-container input {
+  width: 100%;
+  padding-right: 40px;
+  /* espaço pro ícone */
+}
+
+.olho {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.1em;
+  user-select: none;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 20px;
