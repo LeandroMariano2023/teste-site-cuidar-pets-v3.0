@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Cadastro de Tutor e Pets</title>
 </head>
+
 <body>
   <div class="container">
-    <form class="formulario" autocomplete="on">
+    <form class="formulario" autocomplete="on" onsubmit="return validarSenha()">
       <h1>Cadastro de Tutor e Pets</h1>
 
       <!-- Dados do Tutor -->
@@ -59,16 +61,23 @@
         <button type="button" onclick="adicionarPet()">Adicionar outro pet</button>
       </fieldset>
 
-      <button type="submit" class="btn"><a href="../login/index.html">Cadastrar</a></button>
+      <!-- Senha -->
+      <fieldset>
+        <legend>Dados de Acesso</legend>
+
+        <div class="senha-container">
+          <input type="password" name="senha" id="senha" placeholder="Senha" required>
+          <span class="olho" onclick="toggleSenha('senha', this)">👁️</span>
+        </div>
+
+        <div class="senha-container">
+          <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha" required>
+          <span class="olho" onclick="toggleSenha('confirmar_senha', this)">👁️</span>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn">Cadastrar</button>
     </form>
   </div>
-
-  <script>
-    function adicionarPet() {
-      const petSection = document.querySelector('.pet');
-      const clone = petSection.cloneNode(true);
-      petSection.parentNode.insertBefore(clone, petSection.nextSibling);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
