@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f2f5f9;
+  background-color: #255F38;
   color: #333;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+.btn {
   background-color: #2ecc71;
   color: white;
   cursor: pointer;
@@ -74,8 +74,13 @@ button {
   text-decoration: none;
 }
 
-button:hover {
+.btn:hover {
   background-color: #27ae60;
+}
+
+.btn a{
+  text-decoration: none;
+  color: white;
 }
 
 .senha-container {
