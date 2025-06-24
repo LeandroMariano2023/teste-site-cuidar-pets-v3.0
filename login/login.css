@@ -98,6 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 25px;
 }
 
 .input-group {
@@ -212,6 +213,13 @@ body {
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+.btnVoltar{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 600;
 }
 
 /* ===== RESPONSIVIDADE ===== */
