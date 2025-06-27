@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="shortcut icon" href="/imagem/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Meu Perfil</h1>
+
+
+    <form method="POST" enctype="multipart/form-data">
+        <img src="../pos-login/imagem/1271639974584_f.jpg" alt="Foto de perfil">
+        <label>Alterar foto: <input type="file" name="foto"></label>
+
+        <input type='text' value='Nome' >
+        <input type='email' name='email' value='email'disabled>
+        <input type='tel' name='telefone' value='telefone'>
+
+        <input type='date' name='$campo' value='$valor'>
+        <select name='$campo'>
+            <option value='masculino' >Masculino</option>
+            <option value='feminino'>Feminino</option>
+            <option value='outro'>Outro</option>
+        </select>
+        <select name='$campo'>
+            <option value='fundamental' >Fundamental</option>
+            <option value='medio'>Médio</option>
+            <option value='superior'>Superior</option>
+        </select><input type='text' name='$campo' value=''>
+
+        <button type="submit"><a href="../pos-login/index.html">Salvar Alterações</a></button>
+    </form>
+
+    <a href="../pos-login/index.html" class="botao-voltar">Voltar</a>
+
+</body>
+
+</html>
