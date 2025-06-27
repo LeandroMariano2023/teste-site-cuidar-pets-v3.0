@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Cadastro de Tutor e Pets</title>
+  <link rel="shortcut icon" href="/imagem/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <div class="container">
-    <form class="formulario" autocomplete="on" onsubmit="return validarSenha()">
+    <form action="tutor.php" method="POST" enctype="multipart/form-data" class="formulario" onsubmit="return validarSenha()">
       <h1>Cadastro de Tutor e Pets</h1>
 
       <!-- Dados do Tutor -->
       <fieldset>
         <legend>Dados do Tutor</legend>
-        <input type="text" name="cpf" placeholder="CPF" required>
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" required>
         <input type="text" name="nome" placeholder="Nome completo" required>
         <select name="genero" required>
           <option value="" disabled selected>Gênero</option>
@@ -52,32 +53,32 @@
             <option value="femea">Fêmea</option>
           </select>
           <input type="number" name="pet_idade[]" placeholder="Idade" required>
-          <input type="date" name="pet_nascimento[]" placeholder="Data de nascimento" required>
-          <input type="text" name="pet_sinais[]" placeholder="Sinais característicos" required>
+          <!-- <input type="date" name="pet_nascimento[]" placeholder="Data de nascimento" required> -->
+          <input type="text" name="pet_sinais[]" placeholder="Sinais característicos">
           <input type="text" name="pet_pelagem[]" placeholder="Pelagem/Plumagem" required>
           <input type="text" name="pet_microchip[]" placeholder="Microchip">
           <input type="file" name="pet_foto[]" accept="image/*">
         </div>
-        <button type="button" onclick="adicionarPet()">Adicionar outro pet</button>
+        <button class="btn" type="button" onclick="adicionarPet()">Adicionar outro pet</button>
       </fieldset>
 
       <!-- Senha -->
       <fieldset>
         <legend>Dados de Acesso</legend>
-
         <div class="senha-container">
           <input type="password" name="senha" id="senha" placeholder="Senha" required>
           <span class="olho" onclick="toggleSenha('senha', this)">👁️</span>
         </div>
-
         <div class="senha-container">
           <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha" required>
           <span class="olho" onclick="toggleSenha('confirmar_senha', this)">👁️</span>
         </div>
       </fieldset>
-      <button type="submit" class="btn">Cadastrar</button>
+      <button  class="btn" id="submit"><a href="../login/index.html">Cadastrar</a></button>
+      <button class="btn"><a href="../index.html">Voltar</a></button>
     </form>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
