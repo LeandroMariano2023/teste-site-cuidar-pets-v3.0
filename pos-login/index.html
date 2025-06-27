@@ -1,60 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cuidar Pets - Área do usuário">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Área do Usuário | Cuidar Pets</title>
-
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- Ícones -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-<link rel="shortcut icon" href="../imagem/favicon.ico" type="image/x-icon">
+    <!-- Fontes e Ícones -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="/imagem/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Header -->
     <header class="dashboard-header">
         <div class="container">
             <div class="header-content">
-                <img class="logo" src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="logo">
-
-
+                <a href="#" class="logo-link">
+                    <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="logo" />
+                </a>
                 <!-- Menu Desktop -->
                 <nav class="main-nav">
                     <ul class="nav-list">
                         <li><a href="#home" class="nav-link active">Home</a></li>
                         <li class="nav-sphere"></li>
+
+                        <li><a href="#pets" class="nav-link">Meus Pets</a></li>
+                        <li class="nav-sphere"></li>
+
                         <li><a href="#services" class="nav-link">Serviços</a></li>
                         <li class="nav-sphere"></li>
-                        <li><a href="#messages" class="nav-link">Mensagens</a></li>
-                        <li class="nav-sphere"></li>
-                        <li><a href="#profile" class="nav-link">Perfil</a></li>
                     </ul>
-
                     <div class="user-menu">
                         <div class="user-avatar">
-                            <img src="imagem/dog.jpg" alt="Foto do usuário">
+
+                            <img src="imagem/1271639974584_f.jpg" alt="Foto do usuário" />
+
+
+
                             <span>Meu Perfil</span>
-                            <i class='bx bx-chevron-down'></i>
+                            <i class="bx bx-chevron-down"></i>
                         </div>
                         <div class="dropdown-menu">
-                            <a href="#profile"><i class='bx bx-user'></i> Perfil</a>
-                            <a href="#settings"><i class='bx bx-cog'></i> Configurações</a>
-                            <a href="../index.html"><i class='bx bx-log-out'></i> Sair</a>
+                            <a href="../perfil/perfil.php"><i class="bx bx-user"></i> Perfil</a>
+                            <a href="../index.html"><i class="bx bx-log-out"></i> Sair</a>
                         </div>
                     </div>
                 </nav>
-
                 <!-- Menu Mobile -->
                 <button class="hamburger" aria-label="Menu" aria-expanded="false">
                     <span class="bar"></span>
@@ -63,229 +54,211 @@
                 </button>
             </div>
         </div>
-
         <!-- Menu Mobile -->
         <nav class="mobile-nav">
             <ul>
-                <li><a href="#home" class="mobile-nav-link active"><i class='bx bx-home'></i> Home</a></li>
-                <li><a href="#services" class="mobile-nav-link"><i class='bx bx-dog'></i> Serviços</a></li>
-                <li><a href="#messages" class="mobile-nav-link"><i class='bx bx-message'></i> Mensagens</a></li>
-                <li><a href="#profile" class="mobile-nav-link"><i class='bx bx-user'></i> Perfil</a></li>
-                <li><a href="../index.html" class="mobile-nav-link logout"><i class='bx bx-log-out'></i> Sair</a></li>
+                <li><a href="#home" class="mobile-nav-link active"><i class="bx bx-home"></i> Home</a></li>
+                <li><a href="#services" class="mobile-nav-link"><i class="bx bx-dog"></i> Serviços</a></li>
+
+                <li><a href="#pets" class="mobile-nav-link"><i class="bx bx-dog"></i> Meus Pets</a></li>
+
+                <li><a href="../perfil/perfil.php" class="mobile-nav-link"><i class="bx bx-user"></i> Perfil</a></li>
+                <li><a href="../php/logout/sair.php" class="mobile-nav-link"><i class="bx bx-log-out"></i> Sair</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="dashboard-main">
-        <!-- Seção Bem-vindo -->
         <section id="home" class="welcome-section">
             <div class="container">
                 <div class="welcome-content">
-                    <h1>Bem-vindo de volta, <span>Nome do Usuário</span>!</h1>
-                    <p class="subtitle">O que vamos cuidar hoje?</p>
+                    <h1>
 
+                        Bem-vindo de volta, <span>Fulano</span>!
+                        <p class='subtitle'>O que vamos cuidar hoje?</p>
+
+                    </h1>
                     <div class="quick-actions">
-                        <a href="#schedule" class="quick-action">
-                            <i class='bx bx-calendar'></i>
+
+                        <a href="../agendamentos/agendar_servico.php" class="quick-action">
+                            <i class="bx bx-calendar"></i>
                             <span>Agendar Serviço</span>
                         </a>
-                        <a href="#messages" class="quick-action">
-                            <i class='bx bx-message'></i>
-                            <span>Ver Mensagens</span>
-                        </a>
                         <a href="#pets" class="quick-action">
-                            <i class='bx bx-dog'></i>
+                            <i class="bx bx-dog"></i>
                             <span>Meus Pets</span>
                         </a>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Agendamentos -->
+        <!-- Seções específicas para tutor -->
+
         <section id="appointments" class="appointments-section">
             <div class="container">
-                <h2 class="section-title">Próximos Agendamentos</h2>
-
+                <h2 class="section-title">Meus Agendamentos</h2>
                 <div class="appointments-grid">
-                    <div class="appointment-card">
-                        <div class="appointment-header">
-                            <h3>Passeio com o Thor</h3>
-                            <span class="status confirmed">Confirmado</span>
-                        </div>
-                        <div class="appointment-details">
-                            <p><i class='bx bx-calendar'></i> 15/06/2023 - 14:00</p>
-                            <p><i class='bx bx-user'></i> Cuidador: João Silva</p>
-                            <p><i class='bx bx-map'></i> Parque Central</p>
-                        </div>
-                        <div class="appointment-actions">
-                            <button class="btn secondary"><i class='bx bx-chat'></i> Mensagem</button>
-                            <button class="btn primary"><i class='bx bx-dots-vertical-rounded'></i> Opções</button>
-                        </div>
-                    </div>
+
 
                     <div class="appointment-card">
                         <div class="appointment-header">
-                            <h3>Hospedagem da Luna</h3>
-                            <span class="status pending">Pendente</span>
+                            <h3>Passeio</h3>
+                            <span class="status">Pendente</span>
                         </div>
-                        <div class="appointment-details">
-                            <p><i class='bx bx-calendar'></i> 20/06/2023 - 08:00</p>
-                            <p><i class='bx bx-user'></i> Cuidador: Maria Souza</p>
-                            <p><i class='bx bx-map'></i> Domicílio do cuidador</p>
+                        <div class=" appointment-details">
+                            <p>
+                                <i class="bx bx-calendar"></i>
+                                30/06/2025
+                                14:00
+                            </p>
+                            <p>
+                                <i class="bx bx-user"></i>
+                                Beltrano
+                            </p>
+                            <p>
+                                <i class="bx bx-dog"></i>
+                                Luna
+                            </p>
+                            <p><i class="bx bx-comment"></i> Nota: ele é bastante peralta</p>
+
                         </div>
                         <div class="appointment-actions">
-                            <button class="btn secondary"><i class='bx bx-chat'></i> Mensagem</button>
-                            <button class="btn primary"><i class='bx bx-dots-vertical-rounded'></i> Opções</button>
+                            <a href="/conversa/conversa.php" class="btn secondary">
+                                <i class="bx bx-chat"></i> Mensagem
+                            </a>
+                            <div class="dropdown">
+                                <button class="btn primary" onclick="toggleDropdown()"><i
+                                        class="bx bx-dots-vertical-rounded"></i> Opções</button>
+                                <div class="dropdown-content" id="dropdownMenu">
+                                    <a
+                                        href="../agendamentos/editar_agendamento.php?id=<?php echo urlencode($agendamento['id'] ?? ''); ?>">Editar</a>
+                                    <a href="../agendamentos/excluir_agendamento.php?id=<?php echo urlencode($agendamento['id'] ?? ''); ?>"
+                                        onclick="return confirm('Tem certeza que deseja excluir este agendamento?');">Excluir</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <a href="#all-appointments" class="see-all">Ver todos os agendamentos <i
-                        class='bx bx-chevron-right'></i></a>
-            </div>
-        </section>
-
-        <!-- Seção Serviços -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <h2 class="section-title">Nossos Serviços</h2>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class='bx bx-walk'></i>
-                        </div>
-                        <h3>Passeio</h3>
-                        <p>Passeios diários para manter seu pet ativo e feliz.</p>
-                        <a href="#" class="btn secondary">Saiba mais</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class='bx bx-home'></i>
-                        </div>
-                        <h3>Hospedagem</h3>
-                        <p>Ambiente seguro e acolhedor para quando você viajar.</p>
-                        <a href="#" class="btn secondary">Saiba mais</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class='bx bx-shower'></i>
-                        </div>
-                        <h3>Banho & Tosa</h3>
-                        <p>Cuidados profissionais para deixar seu pet cheiroso.</p>
-                        <a href="#" class="btn secondary">Saiba mais</a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class='bx bx-plus-medical'></i>
-                        </div>
-                        <h3>Visita Veterinária</h3>
-                        <p>Acompanhamento profissional para a saúde do seu pet.</p>
-                        <a href="#" class="btn secondary">Saiba mais</a>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Pets -->
+
         <section id="pets" class="pets-section">
             <div class="container">
-                <div class="section-header">
+                <div class="pets-header">
                     <h2 class="section-title">Meus Pets</h2>
-                    <a href="#add-pet" class="btn primary"><i class='bx bx-plus'></i> Adicionar Pet</a>
+                    <a href="/adicionar/novo.php" class="btn add-btn">+ Adicionar Pet</a>
                 </div>
 
                 <div class="pets-grid">
-                    <div class="pet-card">
-                        <div class="pet-image">
-                            <img src="imagem/thor.jpg" alt="Thor">
-                        </div>
-                        <div class="pet-info">
-                            <h3>Thor</h3>
-                            <p>Golden Retriever - 3 anos</p>
-                            <div class="pet-tags">
-                                <span class="tag">Castrado</span>
-                                <span class="tag">Vacinado</span>
-                            </div>
-                        </div>
-                        <div class="pet-actions">
-                            <button class="btn-icon"><i class='bx bx-edit'></i></button>
-                            <button class="btn-icon"><i class='bx bx-heart'></i></button>
-                        </div>
-                    </div>
 
                     <div class="pet-card">
                         <div class="pet-image">
-                            <img src="imagem/luna.jpg" alt="Luna">
+                            <img src="imagem/luna.jpg" alt="Pet" />
                         </div>
                         <div class="pet-info">
-                            <h3>Luna</h3>
-                            <p>SRD - 5 anos</p>
+                            <h3>Luna></h3>
+                            <p> caramelo-
+                                5 anos
+                            </p>
                             <div class="pet-tags">
-                                <span class="tag">Castrada</span>
-                                <span class="tag">Vacinada</span>
+                                <span class="tag">fêmea</span>
+
+                                <span class="tag">Microchip: Não</span>
+
+                            </div>
+                            <div class="pet-actions">
+                                <a href="../editar/editar.php?id=<?php echo urlencode($pet['id']); ?>"
+                                    class="btn edit-btn">Editar</a>
                             </div>
                         </div>
-                        <div class="pet-actions">
-                            <button class="btn-icon"><i class='bx bx-edit'></i></button>
-                            <button class="btn-icon"><i class='bx bx-heart'></i></button>
-                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Seção Serviços comum para todos -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bx bx-walk"></i></div>
+                        <h3>Passeio</h3>
+                        <p>Passeios diários para manter seu pet ativo e feliz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bx bx-home"></i></div>
+                        <h3>Hospedagem</h3>
+                        <p>Ambiente seguro e acolhedor para quando você viajar.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bx bx-shower"></i></div>
+                        <h3>Banho & Tosa</h3>
+                        <p>Cuidados profissionais para deixar seu pet cheiroso.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bx bx-plus-medical"></i></div>
+                        <h3>Visita Veterinária</h3>
+                        <p>Acompanhamento profissional para a saúde do seu pet.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <aside class="ad-sidebar">
+        <h3>Publicidade</h3>
+        <div class="ad-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRxTsF2J7tBWJQSUljB6PgZdZpo-3TeCJ3A&s"
+                alt="Propaganda" />
+        </div>
+        <div class="ad-item">
+            <p>Outro anúncio ou texto promocional.</p>
+        </div>
+    </aside>
+
     <footer class="dashboard-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="footer-logo">
+                    <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="footer-logo" />
                     <p>Conectando tutores e cuidadores com amor e responsabilidade.</p>
                 </div>
-
                 <div class="footer-links">
                     <div class="links-column">
                         <h3>Navegação</h3>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#services">Serviços</a></li>
+                            <?php if ($tipoUsuarioLogado === 'tutor'): ?>
                             <li><a href="#pets">Meus Pets</a></li>
-                            <li><a href="#profile">Perfil</a></li>
+                            <?php endif; ?>
+                            <li><a href="../perfil/perfil.php"> Perfil</a></li>
                         </ul>
                     </div>
-
                     <div class="links-column">
                         <h3>Contato</h3>
                         <ul>
-                            <li><a href="mailto:contato@cuidarpets.com"><i class='bx bx-envelope'></i>
+                            <li><a href="mailto:contato@cuidarpets.com"><i class="bx bx-envelope"></i>
                                     contato@cuidarpets.com</a></li>
-                            <li><a href="tel:+5511999999999"><i class='bx bx-phone'></i> (11) 99999-9999</a></li>
-                            <li><a href="#"><i class='bx bx-map'></i> São Lourenço da Mata, PE</a></li>
+                            <li><a href="tel:+5511999999999"><i class="bx bx-phone"></i> (11) 99999-9999</a></li>
+                            <li><a href="#"><i class="bx bxl-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="bx bxl-instagram"></i> Instagram</a></li>
                         </ul>
-                    </div>
-
-                    <div class="links-column">
-                        <h3>Redes Sociais</h3>
-                        <div class="social-links">
-                            <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-instagram'></i></a>
-                            <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Cuidar Pets. Todos os direitos reservados.</p>
-                <div class="legal-links">
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Política de Privacidade</a>
-                </div>
+            <div class="footer-copy">
+                <p>&copy;
+                    <?php echo date("Y"); ?> Cuidar Pets. Todos os direitos reservados.
+                </p>
             </div>
         </div>
     </footer>

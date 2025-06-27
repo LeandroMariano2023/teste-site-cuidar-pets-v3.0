@@ -102,3 +102,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+// Fechar o dropdown se o usuário clicar fora dele
+window.onclick = function(event) {
+    if (!event.target.matches('.btn.primary')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+ // Script para dropdown menu do header
+        document.querySelector(".user-avatar").addEventListener("click", function () {
+            document.querySelector(".dropdown-menu").classList.toggle("show");
+        });
+
+        // Fecha dropdown clicando fora
+        window.onclick = function (event) {
+            if (!event.target.matches(".user-avatar") && !event.target.closest(".dropdown-menu")) {
+                const dropdowns = document.querySelectorAll(".dropdown-menu");
+                dropdowns.forEach(dd => dd.classList.remove("show"));
+            }
+        };
+
+        // Função para o dropdown dos agendamentos (botão opções)
+        function toggleDropdown() {
+            const dropdown = event.currentTarget.nextElementSibling;
+            dropdown.classList.toggle("show");
+        }
