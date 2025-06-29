@@ -15,9 +15,8 @@
     <header class="dashboard-header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo-link">
-                    <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="logo" />
-                </a>
+                <img src="imagem/nova_logo-removebg-preview.png" alt="Cuidar Pets" class="logo" />
+
                 <!-- Menu Desktop -->
                 <nav class="main-nav">
                     <ul class="nav-list">
@@ -32,10 +31,7 @@
                     </ul>
                     <div class="user-menu">
                         <div class="user-avatar">
-
-                            <img src="imagem/1271639974584_f.jpg" alt="Foto do usuário" />
-
-
+                            <img src="imagem/1271639974584_f.jpg" alt="Foto do usuário">
 
                             <span>Meu Perfil</span>
                             <i class="bx bx-chevron-down"></i>
@@ -73,7 +69,6 @@
             <div class="container">
                 <div class="welcome-content">
                     <h1>
-
                         Bem-vindo de volta, <span>Fulano</span>!
                         <p class='subtitle'>O que vamos cuidar hoje?</p>
 
@@ -100,7 +95,6 @@
             <div class="container">
                 <h2 class="section-title">Meus Agendamentos</h2>
                 <div class="appointments-grid">
-
 
                     <div class="appointment-card">
                         <div class="appointment-header">
@@ -133,8 +127,8 @@
                                         class="bx bx-dots-vertical-rounded"></i> Opções</button>
                                 <div class="dropdown-content" id="dropdownMenu">
                                     <a
-                                        href="../agendamentos/editar_agendamento.php?id=<?php echo urlencode($agendamento['id'] ?? ''); ?>">Editar</a>
-                                    <a href="../agendamentos/excluir_agendamento.php?id=<?php echo urlencode($agendamento['id'] ?? ''); ?>"
+                                        href="../agendamentos/editar_agendamento.php">Editar</a>
+                                    <a href="../agendamentos/excluir_agendamento.php"
                                         onclick="return confirm('Tem certeza que deseja excluir este agendamento?');">Excluir</a>
                                 </div>
                             </div>
@@ -263,7 +257,7 @@
         </div>
     </footer>
 
-    <script src="js/dashboard.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
