@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburguer.addEventListener("click", () => {
       navMobile.classList.toggle("active");
       hamburguer.classList.toggle("active");
-
-      // Atualiza aria-expanded para acessibilidade
-      const expanded = hamburguer.getAttribute("aria-expanded") === "true";
-      hamburguer.setAttribute("aria-expanded", !expanded);
     });
 
     // Fecha o menu ao clicar em qualquer link do menu mobile

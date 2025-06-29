@@ -2,45 +2,42 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Cuidar Pets - Conectando tutores e cuidadores de animais" />
-	<title>Cuidar Pets - Conectando tutores e cuidadores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidar Pets - Conectando tutores e cuidadores</title>
 
-	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="/imagem/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/imagem/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-	<header class="header container" role="banner">
-		<div class="header-left">
-			<img src="imagem/nova_logo-removebg-preview.png" alt="Logo Cuidar Pets" class="logo" />
-        </div>
-        <nav class="nav-desktop" aria-label="Menu principal">
-        
-            <ul class="nav-list">
-                <li><a href="#sobre" class="nav-link smooth-scroll">Sobre Nós</a></li>
-                <li><a href="#servicos" class="nav-link smooth-scroll">Serviços</a></li>
-                <li><a href="#contato" class="nav-link smooth-scroll">Contato</a></li>
-            </ul>
+  <header class="header container">
+    <div class="header-left">
+      <img src="imagem/nova_logo-removebg-preview.png" alt="Logo Cuidar Pets" class="logo" />
+    </div>
+    <nav class="nav-desktop">
 
-        </nav>
-        <div class="auth-buttons">
-            <a href="login/index.html" class="btn-login">Login</a>
-            <a href="escolher/index.html" class="btn-cadastro">Cadastre-se</a>
-        </div>
+      <ul class="nav-list">
+        <li><a href="#sobre" class="nav-link smooth-scroll">Sobre Nós</a></li>
+        <li><a href="#servicos" class="nav-link smooth-scroll">Serviços</a></li>
+        <li><a href="#contato" class="nav-link smooth-scroll">Contato</a></li>
+      </ul>
 
-        <!-- Botão hamburguer agora com id para JS funcionar -->
-        <button id="hamburguer" class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
+    </nav>
+    <div class="auth-buttons">
+      <a href="login/index.html" class="btn-login">Login</a>
+      <a href="escolher/index.html" class="btn-cadastro">Cadastre-se</a>
+    </div>
+    <!-- Botão hamburguer -->
+    <button id="hamburguer" class="hamburguer">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
-
-  <nav id="navMobile" class="nav-mobile" aria-label="Menu mobile">
+  <!-- Menu mobile -->
+  <nav id="navMobile" class="nav-mobile">
     <ul>
       <li><a href="#sobre" class="mobile-nav-link smooth-scroll">Sobre Nós</a></li>
       <li><a href="#servicos" class="mobile-nav-link smooth-scroll">Serviços</a></li>
@@ -56,15 +53,16 @@
     <section class="hero container">
       <h1><span>Cuidar</span>Pets</h1>
       <p class="subtitle">Conectando tutores e cuidadores com carinho e confiança</p>
-      <img src="imagem/pexels-anntarazevich-5763582.jpg" alt="Tutor segurando cachorro com amor" class="hero-image" />
+      <img src="imagem/pexels-anntarazevich-5763582.jpg" alt="Tutor segurando cachorro com amor" class="pet-image">
     </section>
 
     <section id="sobre" class="section container">
       <h2>Sobre Nós</h2>
       <p>
-        Somos apaixonados por animais e acreditamos que cada pet merece cuidado, carinho e atenção. O Cuidar Pets nasceu para conectar tutores
-        de animais com cuidadores experientes e confiáveis. Nossa missão é garantir bem-estar e tranquilidade tanto para os pets quanto para seus
-        donos.
+        Somos apaixonados por animais e acreditamos que cada pet merece cuidado, carinho e atenção. O Cuidar Pets nasceu
+        para conectar tutores
+        de animais com cuidadores experientes e confiáveis. Nossa missão é garantir bem-estar e tranquilidade tanto para
+        os pets quanto para seus donos.
       </p>
     </section>
 
